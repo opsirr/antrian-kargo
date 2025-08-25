@@ -157,7 +157,7 @@ function render(data) {
 
   data.forEach(row => {
     let tr = tbody.querySelector(`tr[data-id='${row[0]}']`);
-    const statusText = (row[4] || "-").toLowerCase();
+    const statusText = (row[5] || "-").toLowerCase();
     let statusClass = "status";
     if (statusText.includes("menunggu")) statusClass += " status-menunggu";
     else if (statusText.includes("diproses")) statusClass += " status-diproses";
