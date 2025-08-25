@@ -104,8 +104,8 @@
         <th>Nama Kargo</th>
         <th>Aktivitas</th>
         <th>Nomor Pintu</th>
+        <th>Nopol</th>
         <th>Status</th>
-        <th>Waktu Daftar</th>
         <th>Petugas</th>
       </tr>
     </thead>
@@ -189,7 +189,7 @@ function render(data) {
       tr.setAttribute("data-id", row[0]);
       tr.innerHTML = innerHTML;
       tr.classList.add("new-row");
-      tbody.prepend(tr);
+      tbody.prepend(tr); // selalu tampil di atas
       document.getElementById("notifSound").play();
       setTimeout(() => tr.classList.remove("new-row"), 800);
     }
